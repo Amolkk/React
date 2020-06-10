@@ -3,18 +3,23 @@ import { connect } from 'react-redux'
 import { signIn } from '../../store/actions/authActions'
 
 class SignIn extends Component {
-  state = {
+   //initial empty state
+ state = {
     email: '',
     password: ''
   }
   handleChange = (e) => {
     this.setState({
+      //sets state in signup while catching error
       [e.target.id]: e.target.value
+    //sets state for whatever ID is provided from the input value div and stores in state above
     })
   }
   handleSubmit = (e) => {
     e.preventDefault();
+    //prevent render
     this.props.signIn(this.state)
+    //let developer know there is an error
   }
   render() {
     const { authError } = this.props;

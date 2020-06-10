@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-
+//Packs to be shown when not signed in
 const SignedOutLinks = () => {
   return (
     <div>

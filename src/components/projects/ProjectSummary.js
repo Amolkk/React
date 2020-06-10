@@ -11,5 +11,5 @@ const ProjectSummary = ({project}) => {
     </div>
   )
 }
-
+//needs to be dynamic make changes
 export default ProjectSummary

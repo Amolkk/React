@@ -3,17 +3,21 @@ import { connect } from 'react-redux'
 import { createProject } from '../../store/actions/projectActions'
 
 class CreateProject extends Component {
+  //empty state
   state = {
     title: '',
     content: ''
   }
   handleChange = (e) => {
     this.setState({
+      //set state with value from form connected at ID
+      // Example: e.target.id = title, e.target.value = from the keyboard
       [e.target.id]: e.target.value
     })
   }
   handleSubmit = (e) => {
     e.preventDefault();
+    //catch error
     // console.log(this.state);
     this.props.createProject(this.state);
     this.props.history.push('/');

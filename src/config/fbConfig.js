@@ -2,7 +2,7 @@ import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
 
-// Replace this with your own config details
+//Needs to be in .gitignore
 var config = {
   apiKey: "AIzaSyBV4aMfu9XizfICXxwqaVgXCS0SFv831n0",
   authDomain: "projectm-2aba4.firebaseapp.com",

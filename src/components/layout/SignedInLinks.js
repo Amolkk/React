@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { signOut } from '../../store/actions/authActions'
 
+//Entire packets of links that need to be showed when signed in
 const SignedInLinks = (props) => {
   return (
     <div>
@@ -14,10 +15,11 @@ const SignedInLinks = (props) => {
     </div>
   )
 }
-
+//Mappping dispatch to props
 const mapDispatchToProps = (dispatch) => {
   return {
     signOut: () => dispatch(signOut())
+    //makes sign out invisible
   }
 }
 

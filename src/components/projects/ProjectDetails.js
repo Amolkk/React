@@ -2,10 +2,11 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { firestoreConnect } from 'react-redux-firebase'
 import { compose } from 'redux'
-
+//Create project details
 const ProjectDetails = (props) => {
   const { project } = props;
   if (project) {
+    //from props
     return (
       <div className="container section project-details">
         <div className="card z-depth-0">
@@ -16,13 +17,14 @@ const ProjectDetails = (props) => {
           <div className="card-action grey lighten-4 grey-text">
             <div>Posted by {project.authorFirstName} {project.authorLastName}</div>
             <div>May 9, 2020 {project.date} </div>
+            {/* stored in createdAt parameter of collection*/}
           </div>
         </div>
       </div>
     )
   } else {
     return (
-      <div className="container center">
+      <div className= "container center">
         <p>Loading project...</p>
       </div>
     )
